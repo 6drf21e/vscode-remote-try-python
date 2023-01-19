@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>About </title>
+</head>
+<!-- 页面背景为淡黄色 -->
+<body style="background-color: #FFFFCC;">
+    <!-- 居中粗体 -->
+    <h1 style="text-align: center; font-weight: bold;">About template</h1>
+    <!-- 文本背景红色 -->
+    <p style="background-color: red;">Some text about the site.</p>
+    <!-- 显示时间的 div 显示格式为 yyyy-mm-dd HH:SS -->
+    <div id="time" style="text-align: center;">{{ cur_time }}</div>
+    <!-- 使用js 循环显示 图片 imgtest 20次， 每行显示10次 图片需要带边框-->
+    <script>
+        
+        for (var i = 0; i < 20; i++) {
+            var img = document.createElement("img");
+        img.src = "/imgtest?r=" + Math.random();
+        img.style.border = "1px solid black";
+            document.body.appendChild(img);
+            // if (i % 10 == 9) {
+            //     document.body.appendChild(document.createElement("br"));
+            // }
+        }
+    </script>
+
+</html>
